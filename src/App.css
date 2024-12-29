@@ -271,10 +271,10 @@ margin: 10vh;
 
 @media only screen and (max-width: 600px) {
     
-    #texte:hover {
+    /* #texte:hover {
        
         font-family: gotlight;
-    }
+    } */
     .logoLanding {
         margin-top: 20vh;
         width: 33vh;
@@ -309,8 +309,8 @@ margin: 10vh;
     
     .image {
         width: 100vw;
-        filter: brightness(1);
-        transition: all .2s ease-in-out;
+        /* filter: brightness(1);
+        transition: all .2s ease-in-out; */
     }
     .projectContainer {
 
