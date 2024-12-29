@@ -1,0 +1,340 @@
+@font-face {
+    font-family: gotUltra;
+    src: url(Gotham-Ultra.otf);
+}
+
+@font-face {
+    font-family: gotBold;
+    src: url(Gotham-Bold.otf);
+}
+
+@font-face {
+    font-family: gotMed;
+    src: url(Gotham-Medium.otf);
+}
+
+@font-face {
+    font-family: gotLight;
+    src: url(Gotham-Light.otf);
+}
+
+body {
+    background: black;
+
+}
+
+.logoLanding {
+    margin-top: 15vh;
+    width: 60vh;
+    margin-bottom: 5vh;
+}
+
+.logoContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.projectContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+.texteContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 2%;
+    z-index: 10000;
+
+}
+
+.texte {
+    font-family: gotLight;
+    color: #FFDF66;
+    font-size: 3.2vh;
+    cursor: pointer;
+}
+
+#image1:hover {
+    filter: brightness(1);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+}
+
+#texte:hover {
+    transition: all .2s ease-in-out;
+    font-family: gotMed;
+}
+
+.textePostprod {
+    font-family: gotLight;
+    color: #FFDF66;
+    font-size: 3.2vh;
+    margin-bottom: 15vh;
+}
+
+.texteSectionProjet {
+    font-family: gotLight;
+    color: #FFDF66;
+    font-size: 3.2vh;
+
+    margin-bottom: 3vh;
+}
+
+.texteSectionService{
+    font-family: gotLight;
+    color: #FFDF66;
+    font-size: 4vh;
+margin: 10vh;
+    margin-bottom: 3vh;
+}
+
+.image {
+    max-width:100%; 
+    width: 50dvw;
+    filter: brightness(0.5);
+    transition: all .2s ease-in-out;
+   
+
+}
+.imageService {
+    width: 25vw;
+    filter: brightness(0.5);
+    transition: all .2s ease-in-out;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: gotMed;
+    font-size: 3.5vw;
+    width: 100%;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+    line-height: 0;
+
+}
+.container2 {
+    position: relative;
+    text-align: center;
+    color: white;
+
+}
+.texteService {
+    text-align: justify;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    font-family: gotLight;
+    font-size: 2.5vh;
+    width: 29vw;
+}
+
+.texteContact {
+    text-align: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-family: gotBold;
+    color: #FFDF66;
+    font-size: 5vh;
+    margin-top: 3vh;
+}
+.texteContact2 {
+    text-align: center;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-family: gotLight;
+    color: #FFDF66;
+    font-size: 2.5vh;
+    margin-top: 1vh;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.653);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.containerContact {
+    display: flex;
+    justify-content: center;
+
+}
+
+.popup-inner {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+
+}
+
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25%
+        /* Player ratio: 100 / (1280 / 720) */
+}
+
+.demo-width {
+    width: 70vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+
+}
+.demo-width2 {
+    width: 45vw;
+    /* top: 50%; */
+    /* left: 50%; */
+    margin-left: 26vw;
+    margin-top: 10vh;
+}
+.service{
+    margin-top: 2.5vh;
+    font-family: gotLight;
+    color: #FFDF66;
+    font-size: 3.2vh;
+}
+.texteAbout {
+    text-align: justify;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    font-size: 2.5vh;
+    color: white;
+    font-family: gotLight;
+}
+.facebook{
+    width: 5vh;
+    cursor: pointer;
+
+  }
+.container1000{
+    display: flex
+    ;
+        justify-content: end;
+        margin-top: -6vh;
+        margin-right: 3vh;
+      
+    }
+  .facebook2{
+    width: 7vh;
+    cursor: pointer;
+  }
+
+  .container2000{
+    margin-top: 8vh;
+    padding-bottom: 4vh;
+
+    background-color: rgb(11, 11, 11);
+}
+/*/*/
+/***************************************************************************************************/
+
+
+
+@media only screen and (max-width: 600px) {
+    .logoLanding {
+        margin-top: 15vh;
+        width: 20vh;
+        margin-bottom: 3vh;
+    }
+
+    .texte {
+
+        font-size: 1.5vh
+    }
+    .textePostprod {
+ 
+        font-size:1.5vh
+      
+    }
+
+
+    .texteSectionService{
+   
+        font-size:4vh
+    }
+    .texteService {
+        text-align: justify;
+   
+     
+        width: auto;
+    }
+
+    .centered {
+        font-size: 3.5vh;
+    } 
+    
+    .image {
+        width: 100vw;
+        filter: brightness(1);
+        transition: all .2s ease-in-out;
+    }
+    .projectContainer {
+        width: 100dvw;
+        display: block;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .imageService {
+        width: 90vw;
+        margin-top: 3vh;
+    }
+
+    .service {
+        margin-top: initial;
+    }
+
+    .container1000 {
+ 
+       
+        margin-top: 1vh;
+        
+    }
+
+    .facebook {
+        width: 3vh;
+     
+    }
+
+    .facebook2 {
+        width: 5vh;
+     
+    }
+    .container2000 {
+   
+        padding-bottom: 1vh;
+    
+    }
+}
