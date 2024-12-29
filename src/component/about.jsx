@@ -17,20 +17,13 @@ function Apropos() {
       </div >
 
 
-      <div className="texteAbout"  > Fondé en 2017 par Virginie Delorme et Noé Provost,
-        La Banane est un studio créatif plein services, basé à Bromont, Qc. Nous sommes
-        spécialisés dans les publicités TV et web. Nous offrons un service de consultation qui cible
-        vos besoins afin de proposer une solution efficace adaptée à vos besoins. Fondé en 2017 par Virginie Delorme et Noé Provost,
-        La Banane est un studio créatif plein services, basé à Bromont, Qc. Nous sommes
-        spécialisés dans les publicités TV et web. Nous offrons un service de consultation qui cible
-        vos besoins afin de proposer une solution efficace adaptée à vos besoins.
-
+      <div className="texteAbout"  > Fondé en 2017 par Virginie Delorme et Noé Provost, La Banane est un studio créatif plein services, basé à Lac-Brome, Qc. Nous sommes spécialisés dans les publicités TV et web. Nous offrons un service de consultation qui cible vos besoins afin de proposer une solution efficace adaptée à vos besoins. 
 
       </div>
 
       <div className='demo-width2'>
-
-        <div className='player-wrapper'>
+{/* 
+      <div className='player-wrapper'>
           <ReactPlayer
             className='react-player'
             url='https://vimeo.com/668244502'
@@ -38,7 +31,7 @@ function Apropos() {
             height='100%'
             controls
           />
-        </div>
+        </div> */}
 
       </div>
 
@@ -62,7 +55,7 @@ function Apropos() {
         <div>
 
           <div className="texteContact"  >
-            Based In
+          Basée à
           </div>
           <div className="texteContact2"  >
 

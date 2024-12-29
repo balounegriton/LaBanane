@@ -1,7 +1,7 @@
 import '../App.css'
 import image1 from '../Assets/ADRIEN GAGNON.png'
 import image2 from '../Assets/BATTERIES EXPERT.png'
-import image3 from '../Assets/DEVINCI.jpg'
+import image3 from '../Assets/DEVINCI.PNG'
 import image4 from '../Assets/JCP.png'
 import image5 from '../Assets/SmokyBay.png'
 import image6 from '../Assets/FaimMuseau.png'
@@ -14,7 +14,9 @@ function Projets(props) {
     <>
   
 
-
+  <div className="logoContainer">
+        <div className="texteSectionService">Projets:</div>
+      </div >
       <div className="projectContainer">
 
 
