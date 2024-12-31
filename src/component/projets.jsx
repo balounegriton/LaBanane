@@ -40,12 +40,12 @@ function Projets(props) {
 
 
         <div className="container" >
-          <img className="image" id="image1" src={image3} alt="logo" />
+          <img className="image" id="image1" src={image3} alt="logo" onClick={() => props.setTrigger3(true)} />
           <div className="centered" >Devinci</div>
         </div>
 
         <div className="container" >
-          <img className="image" id="image1" src={image4} alt="logo" />
+          <img className="image" id="image1" src={image4} alt="logo" onClick={() => props.setTrigger4(true)} />
           <div className="centered" >JC Perreault</div>
         </div>
 
@@ -57,12 +57,12 @@ function Projets(props) {
 
 
         <div className="container" >
-          <img className="image" id="image1" src={image5} alt="logo" />
+          <img className="image" id="image1" src={image5} alt="logo" onClick={() => props.setTrigger5(true)}/>
           <div className="centered" >SmokeyBay</div>
         </div>
 
         <div className="container" >
-          <img className="image" id="image1" src={image6} alt="logo" />
+          <img className="image" id="image1" src={image6} alt="logo" onClick={() => props.setTrigger6(true)}/>
           <div className="centered" >Faim Museau</div>
         </div>
 
@@ -73,12 +73,12 @@ function Projets(props) {
 
 
         <div className="container" >
-          <img className="image" id="image1" src={image7} alt="logo" />
+          <img className="image" id="image1" src={image7} alt="logo" onClick={() => props.setTrigger7(true)} />
           <div className="centered" >Waterax</div>
         </div>
 
         <div className="container" >
-          <img className="image" id="image1" src={image8} alt="logo" />
+          <img className="image" id="image1" src={image8} alt="logo" onClick={() => props.setTrigger8(true)}  />
           <div className="centered" >Sentier de l'est</div>
         </div>
 

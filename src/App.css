@@ -271,10 +271,7 @@ margin: 10vh;
 
 @media only screen and (max-width: 600px) {
     
-    /* #texte:hover {
-       
-        font-family: gotlight;
-    } */
+
     .logoLanding {
         margin-top: 20vh;
         width: 33vh;
@@ -304,7 +301,7 @@ margin: 10vh;
     }
 
     .centered {
-        font-size: 3.5vh;
+        font-size: 4.7vw;
     } 
     
     .image {

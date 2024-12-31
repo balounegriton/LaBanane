@@ -1,9 +1,9 @@
 import React from 'react'
 import '../App.css'
 import ReactPlayer from 'react-player'
-function Popup2(props) {
-    return (props.trigger2) ? (
-        <div className='popup' onClick={ () =>  props.setTrigger2(false)}>
+function Popup6(props) {
+    return (props.trigger6) ? (
+        <div className='popup' onClick={ () =>  props.setTrigger6(false)}>
             <div className='popup-inner'>
              
                 {props.children}
@@ -15,7 +15,7 @@ function Popup2(props) {
                     <div className='player-wrapper'>
                         <ReactPlayer
                             className='react-player'
-                            url='https://vimeo.com/1043146898/71b9842b4a'
+                            url='https://vimeo.com/1043146922/c49c095312'
                             width='100%'
                             height='100%'
                             controls
@@ -28,4 +28,4 @@ function Popup2(props) {
     ) : ``
 }
 
-export default Popup2
+export default Popup6
