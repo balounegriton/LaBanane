@@ -1,54 +1,144 @@
-import '../App.css'
-
+import React, { useState } from 'react';
 
 function Service() {
+  const [showProduction, setShowProduction] = useState(false);
+  const [showPost, setShowPost] = useState(false);
 
-  return (
-    <>
-      
-    <div className="logoContainer">
-        <div className="texteSectionService">Service:</div>
-      </div >
+  const handleShowProduction = () => {
+    setShowProduction(true);
+  };
 
+  const handleShowPost = () => {
+    setShowPost(true);
+  };
 
-      <div className="projectContainer2">
-
-
-        <div className="container2" >
-       
-          <div className="service" > Developement</div>
-          <p className="texteService">
-          Nous transformons les idées en concepts percutants. De l’élaboration des messages-clés à la planification détaillée, nous bâtissons une base solide pour chaque projet.
-
-
-</p>
+  // Contenu détaillé pour "Production"
+const productionDetails = (
+  <div className="full-details">
+   
+    <div className="elements-container">
+ 
+      <div className="element2">
+        <div className="icon-placeholder large">Live</div>
+        <div className="element-text">
+          Envie de partager votre événement en temps réel ? On s’occupe de tout. Que ce soit un spectacle, une conférence ou un lancement, notre équipe capte et diffuse votre live avec une image et un son de qualité professionnelle.
         </div>
-
-        <div className="container2" >
-    
-          <div className="service" >Production </div>
-          <p className="texteService">
-          Nous coordonnons les tournages et réalisons les prises de vue en studio ou sur le terrain avec soin. Chaque moment de production est une chance de créer des visuels uniques.
-
-</p>
+        
+      </div>
+      <div className="element2">
+        <div className="icon-placeholder large">Normes pub</div>
+        <div className="element-text">
+          Normes de la publicité: En plus de la production vidéo, nous vous accompagnons dans vos démarches auprès des Normes de la publicité. Nous préparons et soumettons vos demandes pour assurer qu'elles respectent la réglementation.
         </div>
-        <div className="container2" >
-     
-          <div className="service" >Post-Production</div>
-          <p className="texteService">
-          Nous transformons des séquences brutes en œuvres finales soignées grâce à notre expertise en montage, animation, 3D et VFX. Le souci du détail et l’innovation guident notre approche pour livrer un résultat qui dépasse les attentes.
-</p>
-
-        </div>
-
-
       </div>
 
+    </div>
+    <div className="elements-container">
+      <div className="element2">
+        <div className="icon-placeholder large">Tournage</div>
+        <div className="element-text">
+          Que ce soit en studio ou sur le terrain, on capte vos images avec soin et créativité. De la prise de vue au montage, on transforme vos idées en vidéos qui marquent.
+        </div>
+      </div>
+      <div className="element2">
+        <div className="icon-placeholder large">Live</div>
+        <div className="element-text">
+          Envie de partager votre événement en temps réel ? On s’occupe de tout. Que ce soit un spectacle, une conférence ou un lancement, notre équipe capte et diffuse votre live avec une image et un son de qualité professionnelle.
+        </div>
+        
+      </div>
+    
 
+    </div>
+  </div>
+);
 
+  // Contenu détaillé pour "Post-Production"
+  const postProductionDetails = (
+  <div className="full-details">
+   
+    <div className="elements-container">
+ 
+      <div className="element2">
+        <div className="icon-placeholder large">Live</div>
+        <div className="element-text">
+          Envie de partager votre événement en temps réel ? On s’occupe de tout. Que ce soit un spectacle, une conférence ou un lancement, notre équipe capte et diffuse votre live avec une image et un son de qualité professionnelle.
+        </div>
+        
+      </div>
+      <div className="element2">
+        <div className="icon-placeholder large">Normes pub</div>
+        <div className="element-text">
+          Normes de la publicité: En plus de la production vidéo, nous vous accompagnons dans vos démarches auprès des Normes de la publicité. Nous préparons et soumettons vos demandes pour assurer qu'elles respectent la réglementation.
+        </div>
+      </div>
 
-    </>
-  )
+    </div>
+    <div className="elements-container">
+      <div className="element2">
+        <div className="icon-placeholder large">Tournage</div>
+        <div className="element-text">
+          Que ce soit en studio ou sur le terrain, on capte vos images avec soin et créativité. De la prise de vue au montage, on transforme vos idées en vidéos qui marquent.
+        </div>
+      </div>
+      <div className="element2">
+        <div className="icon-placeholder large">Live</div>
+        <div className="element-text">
+          Envie de partager votre événement en temps réel ? On s’occupe de tout. Que ce soit un spectacle, une conférence ou un lancement, notre équipe capte et diffuse votre live avec une image et un son de qualité professionnelle.
+        </div>
+        
+      </div>
+    
+
+    </div>
+  </div>
+  );
+
+  return (
+    <div className="montage-section">
+      <h2 className="section-title">Services</h2>
+
+      {/* Section Production */}
+      <div className="section-row reverse">
+        <div className="image-placeholder"></div>
+        <div className="text-container">
+          <h3 className="section-heading">Production</h3>
+          <p className="section-text">
+            De la pré-production à la production. Nous organisons les tournages et capturons les images, en studio ou sur le terrain, avec caméras, lumière et son professionnels. Chaque plan est pensé pour servir votre message.
+          </p>
+          {!showProduction && (
+            <button className="voir-plus-btn" onClick={handleShowProduction}>
+              Voir détails
+            </button>
+          )}
+        </div>
+      </div>
+      {/* Affichage du contenu production si activé, qui reste visible */}
+      {showProduction && (
+        <div className="full-details">{productionDetails}</div>
+      )}
+
+      {/* Section Post-Production */}
+      <div className="section-row">
+        <div className="image-placeholder"></div>
+        <div className="text-container">
+          <h3 className="section-heading">Post-Production</h3>
+          <p className="section-text">
+            Nous transformons vos images en contenu final prêt à diffuser : montage, habillage graphique, animation, 3D, effets visuels et mixage sonore. Chaque détail est travaillé pour livrer une vidéo de qualité, efficace et percutante.
+          </p>
+          {!showPost && (
+            <button className="voir-plus-btn" onClick={handleShowPost}>
+              Voir détails
+            </button>
+          )}
+        </div>
+      </div>
+      {/* Affichage du contenu detail post-production si activé, qui reste visible */}
+      {showPost && (
+        <div className="full-details">{postProductionDetails}</div>
+      )}
+    </div>
+  );
 }
 
-export default  Service
+export default Service;

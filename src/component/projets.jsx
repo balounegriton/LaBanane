@@ -15,7 +15,7 @@ function Projets(props) {
   
 
   <div className="logoContainer">
-        <div className="texteSectionService">Projets:</div>
+        <div className="texteSectionService">PORTFOLIO:</div>
       </div >
       <div className="projectContainer">
 

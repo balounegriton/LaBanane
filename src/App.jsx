@@ -60,22 +60,24 @@ function App() {
     <>
       <main>
         <div className="texteContainer" >
-          <div id="texte" className="texte" onClick={scrollToProjet}> PROJETS  </div>
           <div id="texte" className="texte" onClick={scrollToService}> SERVICES  </div>
+          <div id="texte" className="texte" onClick={scrollToProjet}> PORTFOLIO  </div>
           <div id="texte" className="texte" onClick={scrollToApropos}> À PROPOS  </div>
+          <div id="texte" className="texte" onClick={scrollToProjet}> CONTACT  </div>
         </div>
 
 
 
         <Landing />
+          <Element name="Service" className="element"> <Service /> </Element>
         <Element name="Projets" className="element"> <Projets  setTrigger={setButtonPopup1} setTrigger2={setButtonPopup2} setTrigger3={setButtonPopup3}  setTrigger4={setButtonPopup4}  setTrigger5={setButtonPopup5}  setTrigger6={setButtonPopup6}  setTrigger7={setButtonPopup7}  setTrigger8={setButtonPopup8}       />  </Element>
-        <Element name="Service" className="element"> <Service /> </Element>
+      
         <Element name="Apropos" className="element"> <Apropos /> </Element>
       </main>
 
 
 
-      <Popup1 trigger={buttonPopup1} setTrigger={setButtonPopup1} >  </Popup1>
+      <Popup1 trigger={buttonPopup1}  setTrigger={setButtonPopup1} >  </Popup1>
       <Popup2 trigger2={buttonPopup2} setTrigger2={setButtonPopup2} >  </Popup2>
       <Popup3 trigger3={buttonPopup3} setTrigger3={setButtonPopup3} >  </Popup3> 
       <Popup4 trigger4={buttonPopup4} setTrigger4={setButtonPopup4} >  </Popup4>

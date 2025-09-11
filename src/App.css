@@ -22,11 +22,258 @@ body {
     background: black;
 
 }
+.full-details {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
 
+.details-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: gotBold;
+  font-size: 2rem;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 360px;
+  border: none;
+  border-radius: 8px;
+}
+.elements-container {
+  display: flex;
+
+  align-items: center; /* centrer horizontalement */
+  gap: 1vw; /* espace entre chaque bloc */
+}
+.voir-plus-btn {
+    background-color: transparent;
+  border: 2px solid #FFDF66; /* Yellow border */
+  color: #FFDF66; /* Yellow text */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-family: 'gotLight'; /* Use your font here */
+  font-size: 16px; /* Adjust font size as needed */
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth hover transition */ 
+}
+.voir-plus-btn:hover {
+  background-color: #FFDF66; /* Yellow background on hover */
+  color: black; /* Change text color on hover */
+}
+/* chaque "element" est un bloc avec image + texte */
+.element2 {
+  display: flex;
+  align-items: center; /* aligner à la même hauteur */
+  width: 100%;
+  padding: 20px;
+  background-color: #030303; /* ou transparent selon style */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  margin: 10px;
+
+}
+
+/* placeholder image grosse */
+.icon-placeholder {
+
+  background-color: red;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ font-family: gotBold;
+  font-size: vw;
+  color: #ffffff;
+  text-align: center; /* centrer le texte dans le placeholder */
+  flex-shrink: 0;
+}
+
+/* le texte à côté naturellement s'ajuste */
+.element-text {
+  margin-left: 20px;
+  font-family: gotLight;
+  font-size: 1vw;
+ color: #FFDF66;
+  flex: 1; /* prend toute la place restante */
+  text-align: justify; /* optionnel, selon style */
+}
+
+/* Taille augmentée pour la grosse icône */
+.large {
+  width: 10vw;
+  height: 10vw;
+  font-size: 1.9vw; /* si vous avez du texte dans le placeholder */
+}
+
+/* Légère marge pour la section déployée */
+.expanded-section {
+  padding: 20px;
+  background-color: #eee;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-family: gotLight;
+}
+.full-details ul li img.icon {
+  width: 20px; /* ou autre taille selon besoin */
+  height: auto;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+/* Style pour la modale */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 10px;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+  font-family: gotLight;
+  font-size: 1.2rem;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+
+/*////////////////////////////////////////////////+/
+/* Grande taille des titres et textes */
+.section-title {
+  font-family: gotBold;
+  font-size: 4vw; /* très gros titre */
+  text-align: center;
+  margin-bottom: 50px;
+  color: #FFDF66;
+}
+
+.section-heading {
+  font-family: gotBold;
+  font-size: 2.5vw; /* grosse sous-titre */
+  margin-bottom: 20px;
+   color: #FFDF66;
+
+}
+
+.section-text {
+  font-family: gotLight;
+  font-size: 1.5vw; /* texte plus gros */
+  line-height: 1.5vw;
+   color: #FFDF66;
+}
+
+/* Alignement des rangées avec beaucoup d'espace */
+.section-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px; /* espace entre image et texte */
+  margin-bottom: 60px; /* marge entre sections */
+  padding: 20px; /* padding global pour tout */
+}
+
+/* Ajout d’une option pour inversion de la direction */
+.section-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Placeholder rouge, à remplacer par images plus tard */
+.image-placeholder {
+  background-color: red;
+  width: 30vw; /* très grand */
+  height: 20vw; /* consultez la hauteur selon votre design */
+  border-radius: 8px;
+}
+
+/* Texte à droite ou à gauche */
+.text-container {
+max-width: 600px;
+  flex: 1;
+}
+
+.videoPlayer {
+  position: absolute; /* ou fixed, selon l'effet désiré */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.5;
+  z-index: 1; /* pour passer derrière le contenu */
+}
+
+.videoPlayer video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* couvre toute la zone sans déformer */
+}
 .logoLanding {
-    margin-top: 15vh;
+    margin-top: 25vh;
     width: 60vh;
-    margin-bottom: 5vh;
+
+}
+.landing {
+ position: relative;
+min-height: 100vh;
+
+
 }
 
 .logoContainer {
@@ -34,6 +281,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    position: absolute;
+    z-index: 10;
+    
 }
 
 .projectContainer {
@@ -53,18 +303,21 @@ body {
 
 
 .texteContainer {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
-    margin: 2%;
     z-index: 10000;
-
+    display: flex;
+    JUSTIFY-CONTENT: space-around;
+    width: 100%;
+    BACKGROUND: rgba(0, 0, 0, 0.566);
+    
 }
 
 .texte {
     font-family: gotLight;
     color: #FFDF66;
-    font-size: 3.2vh;
+    font-size: 2.3vw;
     cursor: pointer;
 }
 
@@ -84,7 +337,8 @@ body {
     font-family: gotLight;
     color: #FFDF66;
     font-size: 3.2vh;
-    margin-bottom: 15vh;
+    margin-top: 73vh;
+ 
 }
 
 .texteSectionProjet {
@@ -99,7 +353,7 @@ body {
     font-family: gotLight;
     color: #FFDF66;
     font-size: 4vh;
-margin: 10vh;
+
     margin-bottom: 3vh;
 }
 
@@ -273,19 +527,20 @@ margin: 10vh;
     
 
     .logoLanding {
-        margin-top: 20vh;
+        margin-top: 30vh;
         width: 33vh;
-        margin-bottom: 3vh;
+  
     }
 
     .texte {
+font-size: 3.5vw;
 
-        font-size: 2vh
     }
     .textePostprod {
  
         font-size: 2.3vh;
         margin-bottom: 0;
+        margin-top: 58vh;
     }
 
 
