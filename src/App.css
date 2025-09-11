@@ -27,34 +27,154 @@ body {
   padding: 20px;
   border-radius: 8px;
 }
+/* Style du bouton pour mobile (centré en haut) */
+.popup-toggle-btn {
+  display: none;
+  position: absolute; /* ou fixed si vous voulez qu'il soit toujours visible même en scrollant */
+  top: 20px; /* ou 10% si vous voulez centrer verticalement */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  background-color: #FFDF66;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
 
+/* Affiche uniquement sur petit écran */
+@media (max-width: 768px) {
+  .popup-toggle-btn {
+    display: block;
+  }
+}
+
+/* Modal background */
+
+
+/* Modal content */
+
+
+/* Bouton fermer dans modal */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+/* Bouton centré en haut (mobile seulement) */
+.popup-toggle-btn {
+  display: none;
+  position: absolute; /* ou fixed, selon votre besoin */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  background-color: #FFDF66;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Affiche uniquement sur mobile */
+@media (max-width: 768px) {
+  .popup-toggle-btn {
+    display: block;
+  }
+}
+
+/* Fond de la modal background */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+
+.modal-content {
+  background: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 800px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/* bouton fermer */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Le lecteur Vimeo */
+.player-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Emballage du ReactPlayer */
+.player-wrapper {
+  width: 100%;
+  height: 100%;
+  margin-top: 30px; /* espace si besoin */
+}
+
+/* Bouton positionné en absolu, centré verticalement, en bas à droite */
+.popup-toggle-btn {
+  display: none;
+  position: absolute; /* ou fixed si vous souhaitez qu'il reste en place lors du scroll */
+  top: 70vh; /* ou 50% pour le centrer verticalement, ici on le met en haut */
+  left: 50%; /* positionne à 50% de la largeur */
+  transform: translateX(-50%); /* décale de -50% pour centrer */
+  padding: 12px 20px;
+  background-color: #FFDF66;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+/* Afficher seulement sur écran ≤ 768px (mobile) */
+@media (max-width: 768px) {
+  .popup-toggle-btn {
+    display: block;
+  }
+}
 .details-title {
   text-align: center;
   margin-bottom: 20px;
   font-family: gotBold;
   font-size: 2rem;
 }
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
 
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 800px;
-  position: relative;
-}
+
 
 .close-btn {
   position: absolute;
@@ -156,31 +276,9 @@ iframe {
 
 
 /* Style pour la modale */
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
 
-.modal-content {
-  background: #fff;
-  padding: 20px;
-  max-width: 600px;
-  width: 90%;
-  border-radius: 10px;
-  position: relative;
-  max-height: 80vh;
-  overflow-y: auto;
-  font-family: gotLight;
-  font-size: 1.2rem;
-}
+
+
 
 .close-btn {
   position: absolute;
