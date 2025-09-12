@@ -1,68 +1,39 @@
-@font-face {
-  font-family: gotUltra;
-  src: url(Gotham-Ultra.otf);
-}
+@font-face { font-family: gotUltra; src: url(Gotham-Ultra.otf); }
+@font-face { font-family: gotBold; src: url(Gotham-Bold.otf); }
+@font-face { font-family: gotMed; src: url(Gotham-Medium.otf); }
+@font-face { font-family: gotLight; src: url(Gotham-Light.otf); }
 
-@font-face {
-  font-family: gotBold;
-  src: url(Gotham-Bold.otf);
-}
+body { background: black; }
 
-@font-face {
-  font-family: gotMed;
-  src: url(Gotham-Medium.otf);
-}
+/* Bloc de détails */
+.full-details { margin-top: 20px; padding: 20px; border-radius: 8px; }
 
-@font-face {
-  font-family: gotLight;
-  src: url(Gotham-Light.otf);
-}
 
-body {
-  background: black;
-
-}
-
-.full-details {
-  margin-top: 20px;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-/* Style du bouton pour mobile (centré en haut) */
+/* Bouton popup générique */
 .popup-toggle-btn {
   display: none;
   position: absolute;
-  /* ou fixed si vous voulez qu'il soit toujours visible même en scrollant */
-  top: 20px;
-  /* ou 10% si vous voulez centrer verticalement */
   left: 50%;
   transform: translateX(-50%);
   padding: 12px 20px;
-  background-color: #FFDF66;
+  background: #FFDF66;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
   z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
+  margin-top: 70vh;
 }
 
-/* Affiche uniquement sur petit écran */
-@media (max-width: 768px) {
-  .popup-toggle-btn {
-    display: block;
-  }
-}
-
-/* Modal background */
+/* Positionnements spécifiques */
+.popup-toggle-btn.top { top: 20px; }
+.popup-toggle-btn.bottom { top: 70vh; }
 
 
-/* Modal content */
 
-
-/* Bouton fermer dans modal */
+/* Bouton fermer générique */
 .close-btn {
   position: absolute;
   top: 10px;
@@ -74,46 +45,18 @@ body {
   z-index: 10;
 }
 
-/* Bouton centré en haut (mobile seulement) */
-.popup-toggle-btn {
-  display: none;
-  position: absolute;
-  /* ou fixed, selon votre besoin */
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 12px 20px;
-  background-color: #FFDF66;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
+/* ...autres styles conservés... */
 
-/* Affiche uniquement sur mobile */
-@media (max-width: 768px) {
-  .popup-toggle-btn {
-    display: block;
-  }
-}
-
-/* Fond de la modal background */
+/* Fond de la modal */
 .modal-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: flex; justify-content: center; align-items: center;
   z-index: 9999;
 }
 
+/* Contenu modal */
 .modal-content {
   background: #fff;
   border-radius: 10px;
@@ -126,61 +69,18 @@ body {
   position: relative;
 }
 
-/* bouton fermer */
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-}
-
-/* Le lecteur Vimeo */
-.player-wrapper {
-  width: 100%;
-  height: 100%;
-}
+/* ...autres styles conservés... */
 
 /* Emballage du ReactPlayer */
 .player-wrapper {
   width: 100%;
   height: 100%;
   margin-top: 30px;
-  /* espace si besoin */
 }
 
-/* Bouton positionné en absolu, centré verticalement, en bas à droite */
-.popup-toggle-btn {
-  display: none;
-  position: absolute;
-  /* ou fixed si vous souhaitez qu'il reste en place lors du scroll */
-  top: 70vh;
-  /* ou 50% pour le centrer verticalement, ici on le met en haut */
-  left: 50%;
-  /* positionne à 50% de la largeur */
-  transform: translateX(-50%);
-  /* décale de -50% pour centrer */
-  padding: 12px 20px;
-  background-color: #FFDF66;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
+/* ...autres styles conservés... */
 
-/* Afficher seulement sur écran ≤ 768px (mobile) */
-@media (max-width: 768px) {
-  .popup-toggle-btn {
-    display: block;
-  }
-}
-
+/* Titre de section détails */
 .details-title {
   text-align: center;
   margin-bottom: 20px;
@@ -190,15 +90,7 @@ body {
 
 
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+/* ...autres styles conservés... */
 
 iframe {
   width: 100%;
@@ -217,69 +109,60 @@ iframe {
 }
 
 
-/* chaque "element" est un bloc avec image + texte */
+/* Bloc image + texte */
 .element2 {
   display: flex;
   align-items: center;
-  /* aligner à la même hauteur */
   width: 100%;
   padding: 20px;
-  background-color: #030303;
-  /* ou transparent selon style */
+  background: #030303;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
   margin: 10px;
-
 }
 
-/* placeholder image grosse */
+/* Placeholder image */
 .icon-placeholder {
-
-  background-color: red;
+  background: red;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: gotBold;
-  font-size: vw;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-  /* centrer le texte dans le placeholder */
   flex-shrink: 0;
 }
 
-/* le texte à côté naturellement s'ajuste */
+/* Texte à côté de l'image */
 .element-text {
   margin-left: 20px;
   font-family: gotLight;
   font-size: 1vw;
   color: #FFDF66;
   flex: 1;
-  /* prend toute la place restante */
   text-align: justify;
-  /* optionnel, selon style */
 }
 
-/* Taille augmentée pour la grosse icône */
+/* Grosse icône */
 .large {
   width: 10vw;
   height: 10vw;
   font-size: 1.9vw;
-  /* si vous avez du texte dans le placeholder */
 }
 
-/* Légère marge pour la section déployée */
+/* Section déployée */
 .expanded-section {
   padding: 20px;
-  background-color: #eee;
+  background: #eee;
   margin: 20px 0;
   border-radius: 8px;
   font-family: gotLight;
 }
 
+/* Icône dans liste */
 .full-details ul li img.icon {
   width: 20px;
-  /* ou autre taille selon besoin */
   height: auto;
   margin-right: 8px;
   vertical-align: middle;
@@ -291,24 +174,15 @@ iframe {
 
 
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
+/* ...existing code... */
 
 
 
 /*////////////////////////////////////////////////+/
-/* Grande taille des titres et textes */
+/* Titre de section */
 .section-title {
   font-family: gotBold;
   font-size: 4vw;
-  /* très gros titre */
   text-align: center;
   margin-bottom: 50px;
   color: #FFDF66;
@@ -345,26 +219,19 @@ iframe {
   /* padding global pour tout */
 }
 
-/* Ajout d’une option pour inversion de la direction */
-.section-row.reverse {
-  flex-direction: row-reverse;
-}
+/* Inversion de direction */
+.section-row.reverse { flex-direction: row-reverse; }
 
-/* Placeholder rouge, à remplacer par images plus tard */
+/* Placeholder image */
 .image-placeholder {
-  background-color: red;
+  background: red;
   width: 30vw;
-  /* très grand */
   height: 20vw;
-  /* consultez la hauteur selon votre design */
   border-radius: 8px;
 }
 
-/* Texte à droite ou à gauche */
-.text-container {
-  max-width: 600px;
-  flex: 1;
-}
+/* Conteneur texte */
+.text-container { max-width: 600px; flex: 1; }
 
 .videoPlayer {
   position: absolute;
@@ -489,36 +356,167 @@ iframe {
   line-height: 1.5;
   color: #c7c7c7;
 }
+.textePostprod {
+  font-family: gotLight;
+  color: #FFDF66;
+  font-size: 3.2vh;
+  margin-top: 73vh;
+
+}
 
 
 
-/* Responsive styles */
+/* =================== Responsive Styles =================== */
+
+/* ...autres styles de base... */
+
+/* Responsive à la toute fin pour garantir la surcharge */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+  .social-icons {
+    justify-content: center;
+  }
+  .section-heading {
+    font-family: gotBold;
+    font-size: 4vw;
+    margin-bottom: 20px;
+    color: #FFDF66;
+  }
+  .section-text {
+    font-size: 3vw;
+    line-height: normal;
+  }
+  .full-details {
+    margin-top: 20px;
+    padding: 2px;
+    border-radius: 8px;
+}
+}
+
 @media (max-width: 768px) {
+  .popup-toggle-btn { display: block; }
   .apropos-container {
     flex-direction: column;
     align-items: center;
   }
-  .section-text {
-    text-align: justify;
-    font-family: gotLight;
-    font-size: 2.5vw;
-    line-height: 2.5vw;
-    color: #FFDF66;
+  .elements-container {
+    display: block;
+   
 }
-.section-title {
-    font-family: gotBold;
-    font-size: 7vw;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #FFDF66;
+.large {
+    width: 20vw;
+    height: 16vw;
+    font-size: 2.9vw;
+}
+  .element2 {
+
+    width: auto;
+    padding: 10px;
+
 }
 
+.element-text {
+ 
+    font-size: 2.3vw;
+
+}
   .image-placeholder {
-    width: 30%;
+    width: 35vw;
     max-width: 300px;
-    height: auto;
+    height: 65vw;
     aspect-ratio: 1 / 1;
-    /* pour garder un carré, ou changer selon le style */
+  }
+  .section-row {
+
+    gap: 30px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  .section-text {
+    font-size: 4.5vw;
+    line-height: normal;
+  }
+  .section-title {
+    font-size: 7vw;
+  }
+  .texte {
+    font-size: 3.5vw;
+  }
+  .logoLanding {
+    margin-top: 30vh;
+    width: 33vh;
+  }
+  .textePostprod {
+    font-size: 2.3vh;
+    margin-bottom: 0;
+    margin-top: 56vh;
+  }
+  .texteSectionService {
+    font-size: 4vh;
+  }
+  .texteService {
+    width: auto;
+  }
+  .centered {
+    font-size: 4.7vw;
+  }
+  .projectContainer {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .projectContainer2 {
+    width: 100vw;
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .imageService {
+    width: 90vw;
+    margin-top: 3vh;
+  }
+  .service {
+    margin-top: initial;
+  }
+  .container1000 {
+    margin-top: 1vh;
+  }
+  .facebook {
+    width: 3vh;
+  }
+  .facebook2 {
+    width: 5vh;
+  }
+  .container2000 {
+    padding-bottom: 1vh;
+  }
+  .section-heading {
+    font-family: gotBold;
+    font-size: 6vw;
+    margin-bottom: 20px;
+    color: #FFDF66;
+  }
+  .section-text {
+    font-size: 4vw;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .image-placeholder {
+    width: 40vw;
+    height: 67vw;
+  }
+  .texteAbout {
+    font-size: 4vw;
+  }
+  .section-title {
+    font-size: 9vw;
   }
 }
 
@@ -542,13 +540,7 @@ iframe {
   color: #FFDF66;
 }
 
-.textePostprod {
-  font-family: gotLight;
-  color: #FFDF66;
-  font-size: 3.2vh;
-  margin-top: 73vh;
 
-}
 
 .texteSectionProjet {
   font-family: gotLight;
@@ -918,88 +910,4 @@ select:focus {
 
 
 
-@media only screen and (max-width: 600px) {
-
-
-  .logoLanding {
-    margin-top: 30vh;
-    width: 33vh;
-
-  }
-
-  .texte {
-    font-size: 3.5vw;
-
-  }
-
-  .textePostprod {
-
-    font-size: 2.3vh;
-    margin-bottom: 0;
-    margin-top: 58vh;
-  }
-
-
-  .texteSectionService {
-
-    font-size: 4vh
-  }
-
-  .texteService {
-    text-align: justify;
-
-
-    width: auto;
-  }
-
-  .centered {
-    font-size: 4.7vw;
-  }
-
-
-  .projectContainer {
-
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-  .projectContainer2 {
-    width: 100dvw;
-    display: block;
-    justify-content: center;
-    align-items: flex-start;
-  }
-
-
-  .imageService {
-    width: 90vw;
-    margin-top: 3vh;
-  }
-
-  .service {
-    margin-top: initial;
-  }
-
-  .container1000 {
-
-
-    margin-top: 1vh;
-
-  }
-
-  .facebook {
-    width: 3vh;
-
-  }
-
-  .facebook2 {
-    width: 5vh;
-
-  }
-
-  .container2000 {
-
-    padding-bottom: 1vh;
-
-  }
-}
+/* ...media queries fusionnées et optimisées ci-dessus... */
