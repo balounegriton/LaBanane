@@ -1,37 +1,41 @@
 @font-face {
-    font-family: gotUltra;
-    src: url(Gotham-Ultra.otf);
+  font-family: gotUltra;
+  src: url(Gotham-Ultra.otf);
 }
 
 @font-face {
-    font-family: gotBold;
-    src: url(Gotham-Bold.otf);
+  font-family: gotBold;
+  src: url(Gotham-Bold.otf);
 }
 
 @font-face {
-    font-family: gotMed;
-    src: url(Gotham-Medium.otf);
+  font-family: gotMed;
+  src: url(Gotham-Medium.otf);
 }
 
 @font-face {
-    font-family: gotLight;
-    src: url(Gotham-Light.otf);
+  font-family: gotLight;
+  src: url(Gotham-Light.otf);
 }
 
 body {
-    background: black;
+  background: black;
 
 }
+
 .full-details {
   margin-top: 20px;
   padding: 20px;
   border-radius: 8px;
 }
+
 /* Style du bouton pour mobile (centré en haut) */
 .popup-toggle-btn {
   display: none;
-  position: absolute; /* ou fixed si vous voulez qu'il soit toujours visible même en scrollant */
-  top: 20px; /* ou 10% si vous voulez centrer verticalement */
+  position: absolute;
+  /* ou fixed si vous voulez qu'il soit toujours visible même en scrollant */
+  top: 20px;
+  /* ou 10% si vous voulez centrer verticalement */
   left: 50%;
   transform: translateX(-50%);
   padding: 12px 20px;
@@ -41,7 +45,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -69,10 +73,12 @@ body {
   cursor: pointer;
   z-index: 10;
 }
+
 /* Bouton centré en haut (mobile seulement) */
 .popup-toggle-btn {
   display: none;
-  position: absolute; /* ou fixed, selon votre besoin */
+  position: absolute;
+  /* ou fixed, selon votre besoin */
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -83,7 +89,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -97,9 +103,11 @@ body {
 /* Fond de la modal background */
 .modal-backdrop {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,16 +148,21 @@ body {
 .player-wrapper {
   width: 100%;
   height: 100%;
-  margin-top: 30px; /* espace si besoin */
+  margin-top: 30px;
+  /* espace si besoin */
 }
 
 /* Bouton positionné en absolu, centré verticalement, en bas à droite */
 .popup-toggle-btn {
   display: none;
-  position: absolute; /* ou fixed si vous souhaitez qu'il reste en place lors du scroll */
-  top: 70vh; /* ou 50% pour le centrer verticalement, ici on le met en haut */
-  left: 50%; /* positionne à 50% de la largeur */
-  transform: translateX(-50%); /* décale de -50% pour centrer */
+  position: absolute;
+  /* ou fixed si vous souhaitez qu'il reste en place lors du scroll */
+  top: 70vh;
+  /* ou 50% pour le centrer verticalement, ici on le met en haut */
+  left: 50%;
+  /* positionne à 50% de la largeur */
+  transform: translateX(-50%);
+  /* décale de -50% pour centrer */
   padding: 12px 20px;
   background-color: #FFDF66;
   border: none;
@@ -157,7 +170,7 @@ body {
   font-size: 1rem;
   cursor: pointer;
   z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -167,6 +180,7 @@ body {
     display: block;
   }
 }
+
 .details-title {
   text-align: center;
   margin-bottom: 20px;
@@ -192,35 +206,26 @@ iframe {
   border: none;
   border-radius: 8px;
 }
+
 .elements-container {
   display: flex;
 
-  align-items: center; /* centrer horizontalement */
-  gap: 1vw; /* espace entre chaque bloc */
+  align-items: center;
+  /* centrer horizontalement */
+  gap: 1vw;
+  /* espace entre chaque bloc */
 }
-.voir-plus-btn {
-    background-color: transparent;
-  border: 2px solid #FFDF66; /* Yellow border */
-  color: #FFDF66; /* Yellow text */
-  padding: 10px 20px; /* Adjust padding as needed */
-  font-family: 'gotLight'; /* Use your font here */
-  font-size: 16px; /* Adjust font size as needed */
-  text-align: center;
-  cursor: pointer;
-  border-radius: 5px; /* Rounded corners */
-  transition: all 0.3s ease; /* Smooth hover transition */ 
-}
-.voir-plus-btn:hover {
-  background-color: #FFDF66; /* Yellow background on hover */
-  color: black; /* Change text color on hover */
-}
+
+
 /* chaque "element" est un bloc avec image + texte */
 .element2 {
   display: flex;
-  align-items: center; /* aligner à la même hauteur */
+  align-items: center;
+  /* aligner à la même hauteur */
   width: 100%;
   padding: 20px;
-  background-color: #030303; /* ou transparent selon style */
+  background-color: #030303;
+  /* ou transparent selon style */
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
   margin: 10px;
@@ -235,10 +240,11 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
- font-family: gotBold;
+  font-family: gotBold;
   font-size: vw;
   color: #ffffff;
-  text-align: center; /* centrer le texte dans le placeholder */
+  text-align: center;
+  /* centrer le texte dans le placeholder */
   flex-shrink: 0;
 }
 
@@ -247,16 +253,19 @@ iframe {
   margin-left: 20px;
   font-family: gotLight;
   font-size: 1vw;
- color: #FFDF66;
-  flex: 1; /* prend toute la place restante */
-  text-align: justify; /* optionnel, selon style */
+  color: #FFDF66;
+  flex: 1;
+  /* prend toute la place restante */
+  text-align: justify;
+  /* optionnel, selon style */
 }
 
 /* Taille augmentée pour la grosse icône */
 .large {
   width: 10vw;
   height: 10vw;
-  font-size: 1.9vw; /* si vous avez du texte dans le placeholder */
+  font-size: 1.9vw;
+  /* si vous avez du texte dans le placeholder */
 }
 
 /* Légère marge pour la section déployée */
@@ -267,8 +276,10 @@ iframe {
   border-radius: 8px;
   font-family: gotLight;
 }
+
 .full-details ul li img.icon {
-  width: 20px; /* ou autre taille selon besoin */
+  width: 20px;
+  /* ou autre taille selon besoin */
   height: auto;
   margin-right: 8px;
   vertical-align: middle;
@@ -296,7 +307,8 @@ iframe {
 /* Grande taille des titres et textes */
 .section-title {
   font-family: gotBold;
-  font-size: 4vw; /* très gros titre */
+  font-size: 4vw;
+  /* très gros titre */
   text-align: center;
   margin-bottom: 50px;
   color: #FFDF66;
@@ -304,18 +316,20 @@ iframe {
 
 .section-heading {
   font-family: gotBold;
-  font-size: 2.5vw; /* grosse sous-titre */
+  font-size: 2.5vw;
+  /* grosse sous-titre */
   margin-bottom: 20px;
-   color: #FFDF66;
+  color: #FFDF66;
 
 }
 
 .section-text {
   text-align: justify;
   font-family: gotLight;
-  font-size: 1.5vw; /* texte plus gros */
+  font-size: 1.5vw;
+  /* texte plus gros */
   line-height: 1.5vw;
-   color: #FFDF66;
+  color: #FFDF66;
 }
 
 /* Alignement des rangées avec beaucoup d'espace */
@@ -323,9 +337,12 @@ iframe {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px; /* espace entre image et texte */
-  margin-bottom: 60px; /* marge entre sections */
-  padding: 20px; /* padding global pour tout */
+  gap: 50px;
+  /* espace entre image et texte */
+  margin-bottom: 60px;
+  /* marge entre sections */
+  padding: 20px;
+  /* padding global pour tout */
 }
 
 /* Ajout d’une option pour inversion de la direction */
@@ -336,140 +353,144 @@ iframe {
 /* Placeholder rouge, à remplacer par images plus tard */
 .image-placeholder {
   background-color: red;
-  width: 30vw; /* très grand */
-  height: 20vw; /* consultez la hauteur selon votre design */
+  width: 30vw;
+  /* très grand */
+  height: 20vw;
+  /* consultez la hauteur selon votre design */
   border-radius: 8px;
 }
 
 /* Texte à droite ou à gauche */
 .text-container {
-max-width: 600px;
+  max-width: 600px;
   flex: 1;
 }
 
 .videoPlayer {
-  position: absolute; /* ou fixed, selon l'effet désiré */
+  position: absolute;
+  /* ou fixed, selon l'effet désiré */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
   opacity: 0.5;
-  z-index: 1; /* pour passer derrière le contenu */
+  z-index: 1;
+  /* pour passer derrière le contenu */
 }
 
 .videoPlayer video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* couvre toute la zone sans déformer */
+  object-fit: cover;
+  /* couvre toute la zone sans déformer */
 }
+
 .logoLanding {
-    margin-top: 25vh;
-    width: 60vh;
+  margin-top: 25vh;
+  width: 60vh;
 
 }
+
 .landing {
- position: relative;
-min-height: 100vh;
-    cursor: url('/vite.svg') 16 16, auto;
+  position: relative;
+  min-height: 100vh;
+  cursor: url('/vite.svg') 16 16, auto;
 }
+
 .logoContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: absolute;
-    z-index: 10;
-    
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: absolute;
+  z-index: 10;
+
 }
 
 .projectContainer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .projectContainer2 {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 
 
 .texteContainer {
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 10000;
-    display: flex;
-    JUSTIFY-CONTENT: space-around;
-    width: 100%;
-    BACKGROUND: rgba(0, 0, 0, 0.566);
-    
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  JUSTIFY-CONTENT: space-around;
+  width: 100%;
+  BACKGROUND: rgba(0, 0, 0, 0.566);
+
 }
 
 .texte {
-    font-family: gotLight;
-    color: #FFDF66;
-    font-size: 2.3vw;
-    cursor: pointer;
+  font-family: gotLight;
+  color: #FFDF66;
+  font-size: 2.3vw;
+  cursor: pointer;
 }
+
 /* Styles pour le bouton "Voir plus" centré en bas ou en haut selon votre choix */
 .voir-plus-btn {
   background-color: transparent;
   border: 2px solid #FFDF66;
   color: #FFDF66;
-  padding: 10px 20px;
-  font-family: 'gotLight'; /* votre police */
-  font-size: 16px;
+  padding: 2vw 4vw;
+  font-family: 'gotLight';
+  /* votre police */
+  font-size: 1.5vw;
   cursor: pointer;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
+
 .voir-plus-btn:hover {
   background-color: #FFDF66;
   color: black;
 }
 
 .texte222 {
-    font-family: gotMed;
- color: #FFDF66;
-    font-size: 2.3vw;
-    cursor: pointer;
+  font-family: gotMed;
+  color: #FFDF66;
+  font-size: 2.3vw;
+  cursor: pointer;
 }
 
 
 /* Container global, en flex pour grand écran, en colonne pour mobile */
 .apropos-container {
-display: flex
-;
-    align-items: center;
-    gap: 8vw;
-    padding: 2rem;
-    padding-left: 3vw;
-    padding-right: 3vw;
+  display: flex;
+  align-items: center;
+  gap: 8vw;
+  padding: 2rem;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 /* Texte */
 .texteAbout {
-   text-align: justify;
+  text-align: justify;
   flex: 1;
   font-family: gotLight;
-  font-size:2vw;
+  font-size: 2vw;
   line-height: 1.5;
   color: #c7c7c7;
 }
 
-/* Placeholder rouge */
-.image-placeholder {
-  width: 30vw;
-  height: 20vw;
-  background-color: red;
-  border-radius: 8px;
-}
+
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -477,63 +498,81 @@ display: flex
     flex-direction: column;
     align-items: center;
   }
+  .section-text {
+    text-align: justify;
+    font-family: gotLight;
+    font-size: 2.5vw;
+    line-height: 2.5vw;
+    color: #FFDF66;
+}
+.section-title {
+    font-family: gotBold;
+    font-size: 7vw;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #FFDF66;
+}
+
   .image-placeholder {
-    width: 80%;
+    width: 30%;
     max-width: 300px;
     height: auto;
-    aspect-ratio: 1 / 1; /* pour garder un carré, ou changer selon le style */
+    aspect-ratio: 1 / 1;
+    /* pour garder un carré, ou changer selon le style */
   }
 }
-.porfolio{
 
-background-color: #040404;
-    padding-bottom: 6vh;
+.porfolio {
+
+  background-color: #040404;
+  padding-bottom: 6vh;
 
 }
+
 #image1:hover {
-    filter: brightness(1);
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+  filter: brightness(1);
+  cursor: pointer;
+  transition: all .2s ease-in-out;
 
 }
 
 #texte:hover {
-    transition: all .2s ease-in-out;
-    font-family: gotMed;
- color: #FFDF66;
+  transition: all .2s ease-in-out;
+  font-family: gotMed;
+  color: #FFDF66;
 }
 
 .textePostprod {
-    font-family: gotLight;
-    color: #FFDF66;
-    font-size: 3.2vh;
-    margin-top: 73vh;
- 
+  font-family: gotLight;
+  color: #FFDF66;
+  font-size: 3.2vh;
+  margin-top: 73vh;
+
 }
 
 .texteSectionProjet {
-    font-family: gotLight;
-    color: #FFDF66;
-    font-size: 3.2vh;
+  font-family: gotLight;
+  color: #FFDF66;
+  font-size: 3.2vh;
 
-    margin-bottom: 3vh;
+  margin-bottom: 3vh;
 }
 
-.texteSectionService{
-    font-family: gotLight;
-    color: #FFDF66;
-    font-size: 4vh;
+.texteSectionService {
+  font-family: gotLight;
+  color: #FFDF66;
+  font-size: 4vh;
 
-    margin-bottom: 3vh;
+  margin-bottom: 3vh;
 }
 
 .image {
-    max-width:100%; 
-    width: 46dvw;
-    filter: brightness(0.5);
-    transition: all .2s ease-in-out;
-    margin: 1vw;
-   box-shadow: 0.1vw -.1vw 1vw rgba(255, 255, 255, 0.2);
+  max-width: 100%;
+  width: 46dvw;
+  filter: brightness(0.5);
+  transition: all .2s ease-in-out;
+  margin: 1vw;
+  box-shadow: 0.1vw -.1vw 1vw rgba(255, 255, 255, 0.2);
 
 }
 
@@ -544,50 +583,63 @@ background-color: #040404;
   min-height: 100vh;
   padding: 50px;
   box-sizing: border-box;
-  font-family:  gotMed; /* police très forte, impactante */
-  gap: 40px; /* espace entre colonnes */
+  font-family: gotMed;
+  /* police très forte, impactante */
+  gap: 40px;
+  /* espace entre colonnes */
 }
 
 /* Info contact à gauche */
 .contact-info {
   flex: 1;
-  min-width: 300px;
-  padding: 30px;
-  background-color: #030303; /* arrière-plan noir */
-  color: #fff; /* texte blanc très contrasté */
+
+
+  background-color: #030303;
+  /* arrière-plan noir */
+  color: #fff;
+  /* texte blanc très contrasté */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .title {
-  font-size: 3.5rem; /* très gros pour impact */
+  font-size: 3.5rem;
+  /* très gros pour impact */
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 30px;
 }
+
 .info-item {
 
-  font-family:  gotMed; /* Impact encore plus impactant */
+  font-family: gotMed;
+  /* Impact encore plus impactant */
   text-align: center;
 
 }
+
 .size1 {
 
-font-size:6vw;
+  font-size: 6vw;
 }
+
 .size2 {
 
-font-size:2vw;
+  font-size: 2vw;
 }
+
 .size4 {
 
-font-size:4vw;
+  font-size: 4vw;
 }
+
 .size3 {
 
-font-size:2vw;
+  font-size: 2vw;
 }
+
 .label {
   font-weight: 900;
   margin-right: 0.5rem;
@@ -598,13 +650,15 @@ font-size:2vw;
   margin-top: 40px;
   display: flex;
   gap: 20px;
-     justify-content: flex-end;
+  justify-content: flex-end;
 }
+
 .social-icons img {
   width: 60px;
   cursor: pointer;
   transition: transform 0.2s;
 }
+
 .social-icons img:hover {
   transform: scale(1.3);
   /* Peut ajouter une couleur ou un effet si besoin */
@@ -613,12 +667,13 @@ font-size:2vw;
 /* Formulaire à droite */
 .contact-form {
   flex: 1;
-  min-width: 300px;
-  padding: 40px;
-  background-color: #030303; /* fond noir */
+
+  background-color: #030303;
+  /* fond noir */
   display: flex;
   flex-direction: column;
 }
+
 .form-title {
   font-size: 3rem;
   font-weight: 900;
@@ -628,36 +683,50 @@ font-size:2vw;
   letter-spacing: 2px;
   text-align: center;
 }
+
 .form-group {
   margin-bottom: 20px;
 }
+
 label {
   display: block;
-  font-family:  gotMed;
+  font-family: gotMed;
   font-size: 1.4rem;
   margin-bottom: 8px;
-      color: white;
+  color: white;
 }
-input[type="text"], input[type="email"], textarea, select {
-  width: 100%;
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 90%;
   padding: 15px;
-  font-family:  gotMed;
+  font-family: gotMed;
   font-size: 1.4rem;
   border: none;
-  border-bottom: 4px solid #fff; /* épais et impactant */
+  border-bottom: 4px solid #fff;
+  /* épais et impactant */
   background: transparent;
   color: #9b9b9b;
   outline: none;
   transition: border-color 0.3s;
 }
-input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
-  border-color: #FFDF66; /* couleur impactante lors du focus */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #FFDF66;
+  /* couleur impactante lors du focus */
 }
+
 .submit-btn {
   padding: 15px 30px;
   font-size: 1.4rem;
-  font-family:  gotMed;
-  background-color: #fff; /* blanc impactant */
+  font-family: gotMed;
+  background-color: #fff;
+  /* blanc impactant */
   color: #222;
   border-radius: 5px;
   border: none;
@@ -666,6 +735,7 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focu
   align-self: center;
   margin-top: 30px;
 }
+
 .submit-btn:hover {
   background-color: #FFDF66;
   color: #fff;
@@ -677,245 +747,259 @@ input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focu
   .contact-wrapper {
     flex-direction: column;
   }
-  .contact-info, .contact-form {
+
+  .contact-info,
+  .contact-form {
     width: 100%;
   }
+
   .social-icons {
     justify-content: center;
   }
 }
 
 .imageService {
-    width: 25vw;
-    filter: brightness(0.5);
-    transition: all .2s ease-in-out;
-    padding-left: 4vw;
-    padding-right: 4vw;
+  width: 25vw;
+  filter: brightness(0.5);
+  transition: all .2s ease-in-out;
+  padding-left: 4vw;
+  padding-right: 4vw;
 
 }
+
 .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: gotMed;
-    font-size: 3.5vw;
-    width: 100%;
-    pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: gotMed;
+  font-size: 3.5vw;
+  width: 100%;
+  pointer-events: none;
 }
 
 .container {
-    position: relative;
-    text-align: center;
-    color: white;
-    line-height: 0;
+  position: relative;
+  text-align: center;
+  color: white;
+  line-height: 0;
 
 }
+
 .container2 {
-    position: relative;
-    text-align: center;
-    color: white;
+  position: relative;
+  text-align: center;
+  color: white;
 
 }
+
 .texteService {
-    text-align: justify;
-    margin-left: 1.5vw;
-    margin-right: 1.5vw;
-    font-family: gotLight;
-    font-size: 2.5vh;
-    width: 29vw;
+  text-align: justify;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  font-family: gotLight;
+  font-size: 2.5vh;
+  width: 29vw;
 }
 
 .texteContact {
-    text-align: center;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    font-family: gotBold;
-    color: #FFDF66;
-    font-size: 5vh;
-    margin-top: 3vh;
+  text-align: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-family: gotBold;
+  color: #FFDF66;
+  font-size: 5vh;
+  margin-top: 3vh;
 }
+
 .texteContact2 {
-    text-align: center;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    font-family: gotLight;
-    color: #FFDF66;
-    font-size: 2.5vh;
-    margin-top: 1vh;
+  text-align: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+  font-family: gotLight;
+  color: #FFDF66;
+  font-size: 2.5vh;
+  margin-top: 1vh;
 }
 
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.653);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.653);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10000;
 }
 
 .containerContact {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
 }
 
 .popup-inner {
-    position: relative;
-    padding: 32px;
-    width: 100%;
+  position: relative;
+  padding: 32px;
+  width: 100%;
 
 }
 
 .react-player {
-    position: absolute;
-    top: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .player-wrapper {
-    position: relative;
-    padding-top: 56.25%
-        /* Player ratio: 100 / (1280 / 720) */
+  position: relative;
+  padding-top: 56.25%
+    /* Player ratio: 100 / (1280 / 720) */
 }
 
 .demo-width {
-    width: 70vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: black;
+  width: 70vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
 
 }
+
 .demo-width2 {
-    width: 45vw;
-    /* top: 50%; */
-    /* left: 50%; */
-    margin-left: 26vw;
-    margin-top: 10vh;
-}
-.service{
-    margin-top: 2.5vh;
-    font-family: gotLight;
-    color: #FFDF66;
-    font-size: 3.2vh;
+  width: 45vw;
+  /* top: 50%; */
+  /* left: 50%; */
+  margin-left: 26vw;
+  margin-top: 10vh;
 }
 
-.facebook{
-    width: 5vh;
-    cursor: pointer;
-
-  }
-.container1000{
-    display: flex
-    ;
-        justify-content: end;
-        margin-top: -6vh;
-        margin-right: 3vh;
-      
-    }
-  .facebook2{
-    width: 7vh;
-    cursor: pointer;
-  }
-
-  .container2000{
-    margin-top: 8vh;
-    padding-bottom: 4vh;
-
-    background-color: rgb(11, 11, 11);
+.service {
+  margin-top: 2.5vh;
+  font-family: gotLight;
+  color: #FFDF66;
+  font-size: 3.2vh;
 }
+
+.facebook {
+  width: 5vh;
+  cursor: pointer;
+
+}
+
+.container1000 {
+  display: flex;
+  justify-content: end;
+  margin-top: -6vh;
+  margin-right: 3vh;
+
+}
+
+.facebook2 {
+  width: 7vh;
+  cursor: pointer;
+}
+
+.container2000 {
+  margin-top: 8vh;
+  padding-bottom: 4vh;
+
+  background-color: rgb(11, 11, 11);
+}
+
 /*/*/
 /***************************************************************************************************/
 
 
 
 @media only screen and (max-width: 600px) {
-    
-
-    .logoLanding {
-        margin-top: 30vh;
-        width: 33vh;
-  
-    }
-
-    .texte {
-font-size: 3.5vw;
-
-    }
-    .textePostprod {
- 
-        font-size: 2.3vh;
-        margin-bottom: 0;
-        margin-top: 58vh;
-    }
 
 
-    .texteSectionService{
-   
-        font-size:4vh
-    }
-    .texteService {
-        text-align: justify;
-   
-     
-        width: auto;
-    }
+  .logoLanding {
+    margin-top: 30vh;
+    width: 33vh;
 
-    .centered {
-        font-size: 4.7vw;
-    } 
-    
- 
-    .projectContainer {
+  }
 
-        justify-content: center;
-        align-items: flex-start;
-    }
+  .texte {
+    font-size: 3.5vw;
 
-    .projectContainer2 {
-        width: 100dvw;
-        display: block;
-        justify-content: center;
-        align-items: flex-start;
-    }
+  }
+
+  .textePostprod {
+
+    font-size: 2.3vh;
+    margin-bottom: 0;
+    margin-top: 58vh;
+  }
 
 
-    .imageService {
-        width: 90vw;
-        margin-top: 3vh;
-    }
+  .texteSectionService {
 
-    .service {
-        margin-top: initial;
-    }
+    font-size: 4vh
+  }
 
-    .container1000 {
- 
-       
-        margin-top: 1vh;
-        
-    }
+  .texteService {
+    text-align: justify;
 
-    .facebook {
-        width: 3vh;
-     
-    }
 
-    .facebook2 {
-        width: 5vh;
-     
-    }
-    .container2000 {
-   
-        padding-bottom: 1vh;
-    
-    }
+    width: auto;
+  }
+
+  .centered {
+    font-size: 4.7vw;
+  }
+
+
+  .projectContainer {
+
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .projectContainer2 {
+    width: 100dvw;
+    display: block;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+
+  .imageService {
+    width: 90vw;
+    margin-top: 3vh;
+  }
+
+  .service {
+    margin-top: initial;
+  }
+
+  .container1000 {
+
+
+    margin-top: 1vh;
+
+  }
+
+  .facebook {
+    width: 3vh;
+
+  }
+
+  .facebook2 {
+    width: 5vh;
+
+  }
+
+  .container2000 {
+
+    padding-bottom: 1vh;
+
+  }
 }
