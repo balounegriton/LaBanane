@@ -44,10 +44,7 @@ function Contact() {
               <label htmlFor="email">Courriel*</label>
               <input type="email" id="courriel" name="courriel" placeholder="Votre courriel" required />
             </div>
-            <div className="form-group">
-              <label htmlFor="telephone">Téléphone</label>
-              <input type="tel" id="telephone" name="telephone" placeholder="Votre téléphone"  />
-            </div>
+   
             <div className="form-group">
               <label htmlFor="sujet">Sujet*</label>
               <select id="sujet" name="sujet" required>
@@ -68,8 +65,7 @@ function Contact() {
         {/* Contact info */}
         <div className="contact-info">
           <div className="info-item size1">LAC-BROME</div>
-          <div className="info-item size2">19 Chem. Howard Lac-Brome,QC</div>
-          <div className="info-item size3">H2K 3G8</div>
+
           <div className="info-item size4">info@la-banane.ca</div>
           
           {/* Icônes réseaux */}

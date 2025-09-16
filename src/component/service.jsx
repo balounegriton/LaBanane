@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import productionImg from '../Assets/production.jpg';
 
 function Service() {
   const [showProduction, setShowProduction] = useState(false);
@@ -100,9 +101,12 @@ const productionDetails = (
 
       {/* Section Production */}
       <div className="section-row reverse">
-        <div className="image-placeholder"></div>
         <div className="text-container">
           <h3 className="section-heading">Production</h3>
+          {/* Image entre le titre et le texte sur mobile */}
+          <div className="image-placeholder image-mobile-only">
+            <img src={productionImg} alt="Production" />
+          </div>
           <p className="section-text">
             De la pré-production à la production. Nous organisons les tournages et capturons les images, en studio ou sur le terrain, avec caméras, lumière et son professionnels. Chaque plan est pensé pour servir votre message.
           </p>
@@ -112,6 +116,10 @@ const productionDetails = (
             </button>
           )}
         </div>
+        {/* Image à droite sur desktop uniquement */}
+        <div className="image-placeholder image-desktop-only">
+          <img src={productionImg} alt="Production" />
+        </div>
       </div>
       {/* Affichage du contenu production si activé, qui reste visible */}
       {showProduction && (
@@ -120,9 +128,16 @@ const productionDetails = (
 
       {/* Section Post-Production */}
       <div className="section-row">
-        <div className="image-placeholder"></div>
+        {/* Image à gauche sur desktop uniquement */}
+        <div className="image-placeholder image-desktop-only">
+          <img src={productionImg} alt="Post-Production" />
+        </div>
         <div className="text-container">
           <h3 className="section-heading">Post-Production</h3>
+          {/* Image entre le titre et le texte sur mobile */}
+          <div className="image-placeholder image-mobile-only">
+            <img src={productionImg} alt="Post-Production" />
+          </div>
           <p className="section-text">
             Nous transformons vos images en contenu final prêt à diffuser : montage, habillage graphique, animation, 3D, effets visuels et mixage sonore. Chaque détail est travaillé pour livrer une vidéo de qualité, efficace et percutante.
           </p>

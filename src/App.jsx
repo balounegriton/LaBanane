@@ -12,7 +12,7 @@ import Popup5 from './component/popup5';
 import Popup6 from './component/popup6';
 import Popup7 from './component/popup7';
 import Popup8 from './component/popup8';
-import Popup9 from './component/popup9';
+import PopupDemo from './component/popupDemo';
 
 import './App.css'
 
@@ -28,7 +28,7 @@ function App() {
   const [buttonPopup6, setButtonPopup6] = useState(false)
   const [buttonPopup7, setButtonPopup7] = useState(false)
   const [buttonPopup8, setButtonPopup8] = useState(false)
-  const [buttonPopup9, setButtonPopup9] = useState(false)
+  const [buttonPopupDemo, setButtonPopupDemo] = useState(false)
 
 
 
@@ -56,7 +56,7 @@ function App() {
 
 
 
-        <Landing setTrigger9={setButtonPopup9} />
+        <Landing setTrigger9={setButtonPopupDemo} />
         <Element name="Service" className="element"> <Service /> </Element>
         <Element name="Projets" className="element porfolio"    > <Projets setTrigger={setButtonPopup1} setTrigger2={setButtonPopup2} setTrigger3={setButtonPopup3} setTrigger4={setButtonPopup4} setTrigger5={setButtonPopup5} setTrigger6={setButtonPopup6} setTrigger7={setButtonPopup7} setTrigger8={setButtonPopup8} />  </Element>
 
@@ -75,7 +75,7 @@ function App() {
       <Popup7 trigger7={buttonPopup7} setTrigger7={setButtonPopup7} >  </Popup7>
       <Popup8 trigger8={buttonPopup8} setTrigger8={setButtonPopup8} >  </Popup8>
 
-      <Popup9 trigger9={buttonPopup9} setTrigger9={setButtonPopup9} >  </Popup9>
+      <PopupDemo trigger9={buttonPopupDemo} setTrigger9={setButtonPopupDemo} >  </PopupDemo>
 
 
     </>
