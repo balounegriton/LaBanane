@@ -25,7 +25,7 @@ const projetsPopup4 = [
 ];
 
 function Popup4(props) {
-    const [zoomImg, setZoomImg] = useState(null);
+    const [zoom, setZoom] = useState({ projetIdx: null, imgIdx: null });
     return props.trigger4 ? (
         <div className='popup' style={{position:'fixed',top:0,left:0,width:'100vw',height:'100vh',zIndex:10000}}>
             <div
@@ -58,7 +58,7 @@ function Popup4(props) {
                                                     src={img}
                                                     alt={projet.titre + ' photo ' + (idx+1)}
                                                     style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'8px',cursor:'zoom-in'}}
-                                                    onClick={() => setZoomImg(img)}
+                                                    onClick={() => setZoom({ projetIdx: n, imgIdx: idx })}
                                                 />
                                             </SwiperSlide>
                                         ))}
@@ -69,11 +69,28 @@ function Popup4(props) {
                         </div>
                     ))}
                 </div>
-                {/* Zoom modal */}
-                {zoomImg && (
-                    <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoomImg(null);}}>
-                        <div className="modal-content" style={{background:'transparent',boxShadow:'none',display:'flex',justifyContent:'center',alignItems:'center'}} onClick={e => e.stopPropagation()}>
-                            <img src={zoomImg} alt="Zoom" style={{maxWidth:'90vw',maxHeight:'80vh',borderRadius:'18px',boxShadow:'0 2px 16px rgba(0,0,0,0.25)'}} />
+                {/* Zoom modal avec Swiper */}
+                {zoom.projetIdx !== null && zoom.imgIdx !== null && (
+                    <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoom({ projetIdx: null, imgIdx: null });}}>
+                        <div className="modal-content" style={{background:'transparent',boxShadow:'none',display:'flex',justifyContent:'center',alignItems:'center',maxWidth:'95vw',maxHeight:'90vh'}} onClick={e => e.stopPropagation()}>
+                            <Swiper
+                                initialSlide={zoom.imgIdx}
+                                spaceBetween={10}
+                                slidesPerView={1}
+                                navigation
+                                modules={[Navigation]}
+                                style={{width:'70vw',height:'auto',maxHeight:'80vh'}}
+                            >
+                                {projetsPopup4[zoom.projetIdx].images.map((img, idx) => (
+                                    <SwiperSlide key={idx}>
+                                        <img
+                                            src={img}
+                                            alt={projetsPopup4[zoom.projetIdx].titre + ' photo ' + (idx+1)}
+                                            style={{width:'100%',height:'100%',objectFit:'contain',borderRadius:'18px',boxShadow:'0 2px 16px rgba(0,0,0,0.25)'}}
+                                        />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </div>
                     </div>
                 )}

@@ -26,7 +26,8 @@ const projetsPopup6 = [
 ];
 
 function Popup6(props) {
-    const [zoomImg, setZoomImg] = useState(null);
+    // zoomState: { projetIdx, imgIdx } or null
+    const [zoomState, setZoomState] = useState(null);
     return props.trigger6 ? (
         <div className='popup' style={{position:'fixed',top:0,left:0,width:'100vw',height:'100vh',zIndex:10000}}>
             <div
@@ -59,7 +60,7 @@ function Popup6(props) {
                                                     src={img}
                                                     alt={projet.titre + ' photo ' + (idx+1)}
                                                     style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'8px',cursor:'zoom-in'}}
-                                                    onClick={() => setZoomImg(img)}
+                                                    onClick={() => setZoomState({ projetIdx: n, imgIdx: idx })}
                                                 />
                                             </SwiperSlide>
                                         ))}
@@ -70,11 +71,26 @@ function Popup6(props) {
                         </div>
                     ))}
                 </div>
-                {/* Zoom modal */}
-                {zoomImg && (
-                    <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoomImg(null);}}>
+                {/* Zoom modal with Swiper navigation */}
+                {zoomState && projetsPopup6[zoomState.projetIdx] && projetsPopup6[zoomState.projetIdx].images && (
+                    <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoomState(null);}}>
                         <div className="modal-content" style={{background:'transparent',boxShadow:'none',display:'flex',justifyContent:'center',alignItems:'center'}} onClick={e => e.stopPropagation()}>
-                            <img src={zoomImg} alt="Zoom" style={{maxWidth:'90vw',maxHeight:'80vh',borderRadius:'18px',boxShadow:'0 2px 16px rgba(0,0,0,0.25)'}} />
+                            <Swiper
+                                initialSlide={zoomState.imgIdx}
+                                navigation
+                                modules={[Navigation]}
+                                style={{width:'70vw',height:'auto',maxHeight:'80vh'}}
+                            >
+                                {projetsPopup6[zoomState.projetIdx].images.map((img, idx) => (
+                                    <SwiperSlide key={idx}>
+                                        <img
+                                            src={img}
+                                            alt={projetsPopup6[zoomState.projetIdx].titre + ' zoom photo ' + (idx+1)}
+                                            style={{width:'100%',height:'auto',maxHeight:'80vh',borderRadius:'18px',boxShadow:'0 2px 16px rgba(0,0,0,0.25)'}}
+                                        />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </div>
                     </div>
                 )}

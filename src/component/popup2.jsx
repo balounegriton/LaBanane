@@ -18,32 +18,30 @@ import img3b from '../Assets/Sentier.png';
 import img4a from '../Assets/SmokyBay.png';
 
 function Popup2(props) {
-    const [zoomImg, setZoomImg] = useState(null);
+    const [zoom, setZoom] = useState({ projetIdx: null, imgIdx: null });
 
-// === EASY CUSTOMIZATION SECTION ===
-// For a video project, provide a 'url'. For a photo carousel, provide an 'images' array.
-const projetsPopup2 = [
-    {
-        titre: 'Adrien Gagnon',
-        description: 'Description du projet Adrien Gagnon.',
-        images: [img1a, img1b]
-    },
-    {
-        titre: 'Batteries Expert',
-        description: 'Description du projet Batteries Expert.',
-        url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
-    },
-    {
-        titre: 'JCP',
-        description: 'Description du projet JCP.',
-        images: [img3a, img3b]
-    },
-    {
-        titre: 'Smoky Bay',
-        description: 'Description du projet Smoky Bay.',
-        url: 'https://www.youtube.com/watch?v=jNQXAC9IVRw'
-    },
-];
+    const projetsPopup2 = [
+        {
+            titre: 'Adrien Gagnon',
+            description: 'Description du projet Adrien Gagnon.',
+            images: [img1a, img1b]
+        },
+        {
+            titre: 'Batteries Expert',
+            description: 'Description du projet Batteries Expert.',
+            url: 'https://www.youtube.com/watch?v=ysz5S6PUM-U'
+        },
+        {
+            titre: 'JCP',
+            description: 'Description du projet JCP.',
+            images: [img3a, img3b]
+        },
+        {
+            titre: 'Smoky Bay',
+            description: 'Description du projet Smoky Bay.',
+            url: 'https://www.youtube.com/watch?v=jNQXAC9IVRw'
+        },
+    ];
 
     return props.trigger2 ? (
         <div className='popup' style={{position:'fixed',top:0,left:0,width:'100vw',height:'100vh',zIndex:10000}}>
@@ -77,7 +75,7 @@ const projetsPopup2 = [
                                                     src={img}
                                                     alt={projet.titre + ' photo ' + (idx+1)}
                                                     style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'8px',cursor:'zoom-in'}}
-                                                    onClick={() => setZoomImg(img)}
+                                                    onClick={() => setZoom({ projetIdx: n, imgIdx: idx })}
                                                 />
                                             </SwiperSlide>
                                         ))}
@@ -88,11 +86,28 @@ const projetsPopup2 = [
                         </div>
                     ))}
                 </div>
-                {/* Zoom modal */}
-                {zoomImg && (
-                    <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoomImg(null);}}>
-                        <div className="modal-content" style={{background:'transparent',boxShadow:'none',display:'flex',justifyContent:'center',alignItems:'center'}} onClick={e => e.stopPropagation()}>
-                            <img src={zoomImg} alt="Zoom" style={{maxWidth:'90vw',maxHeight:'80vh',borderRadius:'18px',boxShadow:'0 2px 16px rgba(0,0,0,0.25)'}} />
+                {/* Zoom modal avec Swiper */}
+                {zoom.projetIdx !== null && zoom.imgIdx !== null && (
+                    <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoom({ projetIdx: null, imgIdx: null });}}>
+                        <div className="modal-content" style={{background:'transparent',boxShadow:'none',display:'flex',justifyContent:'center',alignItems:'center',maxWidth:'95vw',maxHeight:'90vh'}} onClick={e => e.stopPropagation()}>
+                            <Swiper
+                                initialSlide={zoom.imgIdx}
+                                spaceBetween={10}
+                                slidesPerView={1}
+                                navigation
+                                modules={[Navigation]}
+                                 style={{width:'70vw',height:'auto',maxHeight:'80vh'}}
+                            >
+                                {projetsPopup2[zoom.projetIdx].images.map((img, idx) => (
+                                    <SwiperSlide key={idx}>
+                                        <img
+                                            src={img}
+                                            alt={projetsPopup2[zoom.projetIdx].titre + ' photo ' + (idx+1)}
+                                            style={{width:'100%',height:'100%',objectFit:'contain',borderRadius:'18px',boxShadow:'0 2px 16px rgba(0,0,0,0.25)'}}
+                                        />
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
                         </div>
                     </div>
                 )}
