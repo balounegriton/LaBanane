@@ -37,7 +37,7 @@ function App() {
       <main>
         <div className="texteContainer" >
           <Link id="texte" to="Service" spy={true}  className="texte" activeClass="texte222"  offset={-50}>
-            <div   > SERVICE  </div>
+            <div   > SERVICES  </div>
           </Link>
 
             <Link id="texte" to="Projets" spy={true} className="texte" activeClass="texte222" offset={-50}>
