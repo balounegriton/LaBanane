@@ -1,5 +1,7 @@
-
 function Popup1(props) {
+  // Helper to detect mobile device
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
   const [zoom, setZoom] = useState({ projetIdx: null, imgIdx: null });
   useEffect(() => {
     if (props.trigger) {
@@ -43,8 +45,10 @@ function Popup1(props) {
                         <img
                           src={img}
                           alt={projet.titre + ' photo ' + (idx+1)}
-                          style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'8px',cursor:'zoom-in'}}
-                          onClick={() => setZoom({ projetIdx: n, imgIdx: idx })}
+                          style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'8px',cursor: isMobile ? 'default' : 'zoom-in'}}
+                          onClick={() => {
+                            if (!isMobile) setZoom({ projetIdx: n, imgIdx: idx });
+                          }}
                         />
                       </SwiperSlide>
                     ))}
@@ -56,7 +60,7 @@ function Popup1(props) {
           ))}
         </div>
         {/* Zoom modal avec Swiper */}
-        {zoom.projetIdx !== null && zoom.imgIdx !== null && (
+        {!isMobile && zoom.projetIdx !== null && zoom.imgIdx !== null && (
           <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoom({ projetIdx: null, imgIdx: null });}}>
             <div className="modal-content" style={{background:'transparent',boxShadow:'none',display:'flex',justifyContent:'center',alignItems:'center',maxWidth:'95vw',maxHeight:'90vh'}} onClick={e => e.stopPropagation()}>
               <Swiper

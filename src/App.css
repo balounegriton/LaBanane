@@ -629,12 +629,17 @@ iframe {
     height: 16vw;
     font-size: 2.9vw;
   }
+  .texteAbout {
+
+    font-size: medium;
+
+}
   .element2 {
     width: auto;
     padding: 10px;
   }
   .element-text {
-    font-size: 2.3vw;
+    font-size: small
   }
   .image-placeholder {
     width: 55vw;
@@ -848,7 +853,8 @@ iframe {
 }
 
 .social-icons img {
-  width: 60px;
+  width: 80px;
+  height: 80PX;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -1039,9 +1045,9 @@ select:focus {
 
 .popup-inner {
   position: relative;
-  padding: 32px;
+
   width: 100%;
-  max-height: 90vh;
+  max-height: 100vh;
   overflow-y: auto;
 }
 

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import '../App.css';
 import ReactPlayer from 'react-player';
@@ -26,6 +25,9 @@ const projetsPopup5 = [
 ];
 
 function Popup5(props) {
+    // Helper to detect mobile device
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
     // zoomState: { projetIdx, imgIdx } or null
     const [zoomState, setZoomState] = useState(null);
     return props.trigger5 ? (
@@ -59,8 +61,10 @@ function Popup5(props) {
                                                 <img
                                                     src={img}
                                                     alt={projet.titre + ' photo ' + (idx+1)}
-                                                    style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'8px',cursor:'zoom-in'}}
-                                                    onClick={() => setZoomState({ projetIdx: n, imgIdx: idx })}
+                                                    style={{width:'100%',height:'100%',objectFit:'cover',borderRadius:'8px',cursor: isMobile ? 'default' : 'zoom-in'}}
+                                                    onClick={() => {
+                                                        if (!isMobile) setZoomState({ projetIdx: n, imgIdx: idx });
+                                                    }}
                                                 />
                                             </SwiperSlide>
                                         ))}
@@ -72,7 +76,7 @@ function Popup5(props) {
                     ))}
                 </div>
                 {/* Zoom modal with Swiper navigation */}
-                {zoomState && projetsPopup5[zoomState.projetIdx] && projetsPopup5[zoomState.projetIdx].images && (
+                {!isMobile && zoomState && projetsPopup5[zoomState.projetIdx] && projetsPopup5[zoomState.projetIdx].images && (
                     <div className="modal-backdrop" style={{zIndex:10001}} onClick={e => {e.stopPropagation(); setZoomState(null);}}>
                         <div className="modal-content" style={{background:'transparent',boxShadow:'none',display:'flex',justifyContent:'center',alignItems:'center'}} onClick={e => e.stopPropagation()}>
                             <Swiper
