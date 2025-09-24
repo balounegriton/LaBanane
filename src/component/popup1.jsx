@@ -110,14 +110,14 @@ import img4a from '../Assets/SmokyBay.png';
 // For a video project, provide a 'url'. For a photo carousel, provide an 'images' array.
 const projetsPopup1 = [
   {
-    titre: 'Projet 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur.',
-    url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+    titre: 'Adrien Gagnon - Bye Bye',
+    description: ' Production humoristique réalisée pour le Bye Bye 2024, en collaboration avec Pas De Fruit. ',
+    url: 'https://vimeo.com/1119152095/e917508bea?ts=0&share=copy'
   },
   {
-    titre: 'Projet 2',
+    titre: 'Energex Boost',
     description: 'Suspendisse potenti. Etiam nec magna euismod, dictum enim nec, cursus enim. Mauris euismod.',
-    images: [img1a, img1b]
+     url: 'https://vimeo.com/1119150138/c48d26c9f9?ts=0&share=copy'
   },
   {
     titre: 'Projet 3',

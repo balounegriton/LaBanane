@@ -449,7 +449,7 @@ iframe {
 .landing {
   position: relative;
   min-height: 100vh;
-  cursor: url('/vite.svg') 16 16, auto;
+  cursor: url('/PlayDemo.svg '   ) 16 16, pointer;
 }
 
 .logoContainer {

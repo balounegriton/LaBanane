@@ -2,6 +2,10 @@
 import React, { useState } from 'react';
 import productionImg from '../Assets/production.jpg';
 import montageImg from '../Assets/Montage.jpeg';
+import LiveImg from '../Assets/LIVE.jpeg';
+import PostProdImg from '../Assets/PostProd.jpg';
+import tournageImg from '../Assets/Tournage.jpg';
+import troisDImg from '../Assets/3D.jpg';
 
 function Service() {
   const [showProduction, setShowProduction] = useState(false);
@@ -22,7 +26,7 @@ const productionDetails = (
     <div className="elements-container">
       <div className="element2">
         <div className="icon-placeholder large" style={{background:'none',padding:0,position:'relative',display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <img src={productionImg} alt="Tournage" style={{width:'10vw',height:'10vw',objectFit:'cover',borderRadius:'8px',boxShadow:'0 2px 8px rgba(0,0,0,0.10)'}} />
+          <img src={tournageImg} alt="Tournage" style={{width:'10vw',height:'10vw',objectFit:'cover',borderRadius:'8px',boxShadow:'0 2px 8px rgba(0,0,0,0.10)'}} />
           <span style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:'white',fontFamily:'gotBold,Arial,sans-serif',textShadow:'0 2px 8px rgba(0,0,0,0.45)',pointerEvents:'none'}}>Tournage</span>
         </div>
         <div className="element-text">
@@ -42,7 +46,7 @@ const productionDetails = (
     <div className="elements-container">
       <div className="element2">
         <div className="icon-placeholder large" style={{background:'none',padding:0,position:'relative',display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <img src={productionImg} alt="Live" style={{width:'10vw',height:'10vw',objectFit:'cover',borderRadius:'8px',boxShadow:'0 2px 8px rgba(0,0,0,0.10)'}} />
+          <img src={LiveImg} alt="Live" style={{width:'10vw',height:'10vw',objectFit:'cover',borderRadius:'8px',boxShadow:'0 2px 8px rgba(0,0,0,0.10)'}} />
           <span style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:'white',fontFamily:'gotBold,Arial,sans-serif',textShadow:'0 2px 8px rgba(0,0,0,0.45)',pointerEvents:'none'}}>Live</span>
         </div>
         <div className="element-text">
@@ -91,7 +95,7 @@ const productionDetails = (
     <div className="elements-container">
       <div className="element2">
         <div className="icon-placeholder large" style={{background:'none',padding:0,position:'relative',display:'flex',alignItems:'center',justifyContent:'center'}}>
-          <img src={montageImg} alt="3D" style={{width:'10vw',height:'10vw',objectFit:'cover',borderRadius:'8px',boxShadow:'0 2px 8px rgba(0,0,0,0.10)'}} />
+          <img src={troisDImg} alt="3D" style={{width:'10vw',height:'10vw',objectFit:'cover',borderRadius:'8px',boxShadow:'0 2px 8px rgba(0,0,0,0.10)'}} />
           <span style={{position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)',color:'white',fontFamily:'gotBold,Arial,sans-serif',textShadow:'0 2px 8px rgba(0,0,0,0.45)',pointerEvents:'none'}}>3D</span>
         </div>
         <div className="element-text">
@@ -170,13 +174,13 @@ const productionDetails = (
       <div className="section-row">
         {/* Image à gauche sur desktop uniquement */}
         <div className="image-placeholder image-desktop-only">
-          <img src={productionImg} alt="Post-Production" />
+          <img src={PostProdImg} alt="Post-Production" />
         </div>
         <div className="text-container">
           <h3 className="section-heading">Post-Production</h3>
           {/* Image entre le titre et le texte sur mobile */}
           <div className="image-placeholder image-mobile-only">
-            <img src={productionImg} alt="Post-Production" />
+            <img src={PostProdImg} alt="Post-Production" />
           </div>
           <p className="section-text">
             Nous transformons vos images en contenu final prêt à diffuser : montage, habillage graphique, animation, 3D, effets visuels et mixage sonore. Chaque détail est travaillé pour livrer une vidéo de qualité, efficace et percutante.
